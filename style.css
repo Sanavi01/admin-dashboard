@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Grape+Nuts&family=Open+Sans&family=Playfair+Display&family=Share+Tech&family=Share+Tech+Mono&display=swap');
+
+:root{
+    --color-primary : dodgerblue;
+    --sidebar-text-color : white;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+.container{
+    display: grid;
+    grid-template-columns: 1.5fr 6fr;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+
+#sidebar{
+    background-color: var(--color-primary);
+}
+
+#sidebar > div {
+    padding: 20px;
+    font-weight: 800;
+}
+
+#logo > a{
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.option{
+    color: var(--sidebar-text-color);
+}
+
+#interaction-options > div , #secondary-options > div{
+    color: white;
+    padding: 10px 0px;
+}
