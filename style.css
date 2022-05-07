@@ -1,43 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Grape+Nuts&family=Open+Sans&family=Playfair+Display&family=Share+Tech&family=Share+Tech+Mono&display=swap');
 
-:root{
-    --color-primary : dodgerblue;
-    --sidebar-text-color : white;
+:root {
+    --color-primary: dodgerblue;
+    --sidebar-text-color: white;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
-  }
+    font-family: 'Roboto', sans-serif;
+}
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 1.5fr 6fr;
     grid-template-rows: 1fr;
     height: 100%;
 }
 
-#sidebar{
+#sidebar {
     background-color: var(--color-primary);
 }
 
-#sidebar > div {
+#sidebar>div {
     padding: 20px;
     font-weight: 800;
 }
 
-#logo > a{
+#logo>a {
     color: white;
     font-size: 25px;
     font-weight: bolder;
 }
 
-.option{
+.option {
     color: var(--sidebar-text-color);
 }
 
-#interaction-options > div , #secondary-options > div{
+#interaction-options>div,
+#secondary-options>div {
     color: white;
     padding: 10px 0px;
+}
+
+#right-container {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+#header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: white;
+}
+
+#nav {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1.5fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding: 0px 10px;
+}
+
+#nav-search-bar {
+    grid-column: 2/3;
+    border-radius: 20px;
+    background-color: gainsboro;
+    height: 25px;
+    border: 0px;
+    padding: 5px;
+    align-self: center;
+}
+
+#nav-search-icon,
+#nav-notificacion-icon,
+#nav-user-icon,
+#nav-name{
+    justify-self: center;
+    align-self: center;
+    padding: 0px 10px;
+}
+
+#nav-search-icon {
+    grid-column: 1/2;
+    height: 20px;
+}
+
+#nav-notificacion-icon {
+    grid-column: 4/5;
+    height: 25px;
+}
+
+#nav-user-icon {
+    grid-column: 5/6;
+    height: 45px;
+}
+
+#nav-name {
+    font-weight: bold;
+    align-self: center;
+}
+
+#user {
+    display: grid;
+    grid-template-columns: 2fr 6fr 3fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr;
+    padding: 10px;
+}
+
+#user-user-icon {
+    justify-self: center;
+    align-self: center;
+    height: 80px;
+}
+
+.user-buttons {
+    background-color: var(--color-primary);
+    color: var(--sidebar-text-color);
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+}
+
+#user-new {
+    grid-column: 4/5;
 }
