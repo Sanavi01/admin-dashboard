@@ -3,7 +3,9 @@
 :root {
     --color-primary: dodgerblue;
     --sidebar-text-color: white;
-    --content-div-color: gainsboro;
+    --background-color: gainsboro;
+    --content-div-color: white;
+    --content-text-color: grey;
 }
 
 body,
@@ -75,8 +77,7 @@ html {
 
 #nav-search-icon,
 #nav-notificacion-icon,
-#nav-user-icon
-{
+#nav-user-icon {
     justify-self: center;
     align-self: center;
     padding: 0px 10px;
@@ -131,50 +132,105 @@ html {
     grid-column: 4/5;
 }
 
-.container4-2{
+.container4-2 {
     display: grid;
-    background-color:var(--content-div-color);
+    background-color: var(--background-color);
     grid-template-columns: 4fr 1.5fr;
     padding: 0px 10px;
 }
 
-#projects{
+#projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     padding: 10px;
 }
 
-.projects-project{
+.projects-project {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
-    background-color: white;
+    background-color: var(--content-div-color);
     width: 1fr;
     height: 200px;
     border-left: 7px solid rgb(255, 217, 0);
 }
 
-.projects-content{
+.projects-content {
     padding: 15px;
-    color: gray;
+    color: var(--content-text-color);
     margin: 0px;
 }
 
-.projects-icons{
+.projects-icons {
     display: flex;
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
     gap: 10px;
     padding: 10px;
 }
 
-.projects-icons > img{
+.projects-icons>img {
     grid-column: 2/3;
     width: 25px;
     height: 25px;
     opacity: 60%;
 }
 
-#news{
+#news {
     display: grid;
     padding: 10px;
+    grid-template-rows: 3fr 0.5fr 3fr;
+}
+
+#news-announcements {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: var(--content-div-color);
+}
+
+.news-announcements-description {
+    padding: 10px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.news-announcements-description>p,
+.news-announcements-description>h5 {
+    margin: 5px 10px;
+}
+
+.news-announcements-description>p{
+    color: var(--content-text-color);
+    font-size: 14px;
+}
+
+#trending{
+    display: grid;
+    grid-template-rows: repeat(5 0.5fr);
+    background-color: var(--content-div-color);
+}
+
+.trends{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 10px;
+    align-self: center;
+}
+
+.trends>img{
+    height: 55px;
+    align-self: center;
+    justify-self: center;
+}
+
+.trends-description{
+    align-self: center;
+}
+
+.trends-description>p{
+    color: var(--content-text-color);
+    font-size: 14px;
+}
+
+.trends-description>p,
+.trends-description>h5{
+    margin: 5px;
 }
